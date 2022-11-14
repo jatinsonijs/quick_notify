@@ -71,6 +71,7 @@ class QuickNotifyPlugin: FlutterPlugin, MethodCallHandler {
         .setContentText(content)
         .setAutoCancel(true)
         .build()
+        notification.flags = Notification.FLAG_AUTO_CANCEL;
       notificationManager.notify(0, notification)
       result.success(null)
     } else {
