@@ -27,7 +27,7 @@ class QuickNotifyPlugin: FlutterPlugin, MethodCallHandler {
   private val channelProps = object {
     var id = "quick_notify"
     var name = "quick_notify"
-    var importance = NotificationManager.IMPORTANCE_DEFAULT
+    var importance = NotificationManager.IMPORTANCE_HIGH
   }
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
@@ -69,6 +69,7 @@ class QuickNotifyPlugin: FlutterPlugin, MethodCallHandler {
         .setSmallIcon(smallIconRes)
         .setContentTitle(title)
         .setContentText(content)
+        .setAutoCancel(true)
         .build()
       notificationManager.notify(0, notification)
       result.success(null)
