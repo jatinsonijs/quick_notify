@@ -1,6 +1,6 @@
 ## 0.3.0-dev.0
 
-- Move to `quick.flutter` mono repo
+- Move to `quick.flutter` mono repo.
 - Refactor Linux implementation to `desktop_notifications`
 - Fetch nuget when unavailable on Windows
 - Refactor notify to asynchronous
